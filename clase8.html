@@ -26,6 +26,54 @@
                 margin: 0;
                 font-family: "Quicksand", sans-serif;
             }
+
+            .mobile-menu {
+                padding: 24px;
+            }
+
+            .mobile-menu a {
+                text-decoration: none;
+                color: var(--black);
+                font-weight: bold;
+                /*margin-bottom: 24px;*/
+            }
+            .mobile-menu ul {
+                padding: 0;
+                margin: 24px 0 0;
+                list-style: none;
+            }
+
+            .mobile-menu ul:nth-child(1) {
+                border-bottom: 1px solid var(--very-light-pink);
+            }
+
+            .mobile-menu ul:nth-child(2) {
+                margin-top: 32px;
+            }
+
+            .mobile-menu ul li {
+                margin-top: 24px;
+            }
+
+            .mobile-menu .user-data {
+                position: absolute;
+                bottom: 20px;
+                width: inherit;
+            }
+
+            .mobile-menu .user-data li {
+                margin-top: 8px;
+            }
+
+            .mobile-menu .email {
+                font-size: var(--sm);
+                font-weight: 300;
+            }
+
+            .mobile-menu .sign-out {
+                font-size: var(--sm);
+                color: var(--hospital-green);
+            }
         </style>
     </head>
     <body>
@@ -67,12 +115,12 @@
                 </li>
             </ul>
 
-            <ul>
+            <ul class="user-data">
                 <li>
-                    <a href="/">My email</a>
+                    <a href="/" class="email">aquiles.vaesa@gmail.com</a>
                 </li>
                 <li>
-                    <a href="/">sign out</a>
+                    <a href="/" class="sign-out">Sign out</a>
                 </li>
             </ul>
         </div>
