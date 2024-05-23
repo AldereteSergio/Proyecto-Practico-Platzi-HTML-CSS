@@ -39,7 +39,8 @@
             .header-container {
                 display: flex;
                 flex-direction: column;
-                width: 300px;
+                max-width: 80%;
+                width: 100%;
             }
             .my-order-content {
                 display: flex;
@@ -71,15 +72,22 @@
                 text-align: end;
                 font-weight: bold;
             }
-            .shopping-cart {
+
+            .shopping-list {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-bottom: 24px;
-                align-items: center;
-                max-width: 300px;
+                flex-direction: column;
+                max-width: 80%;
                 width: 100%;
             }
+            .shopping-cart {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                margin-bottom: 24px;
+                border-radius: 8px;
+                padding: 0 24px;
+            }
+
             .shopping-cart figure {
                 margin: 0;
             }
@@ -90,11 +98,13 @@
             }
             .shopping-cart p:nth-child(2) {
                 color: var(--hospital-green);
-                width: 30%;
+                width: fit-content;
+                padding-left: 20%;
             }
             .shopping-cart p:nth-child(3) {
                 font-size: var(--md);
                 font-weight: bold;
+                text-align: end;
             }
         </style>
     </head>
@@ -112,70 +122,72 @@
                     </div>
                 </div>
             </div>
-            <div class="shopping-cart">
-                <figure>
-                    <img
-                        src="./Assets/images-products/A Juggler_s Tale.jpeg"
-                        alt="A juggle's Tale"
-                    />
-                </figure>
-                <p>A juggle's Tale</p>
-                <p>$30.00</p>
-            </div>
+            <div class="shopping-list">
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/A Juggler_s Tale.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>A juggle's Tale</p>
+                    <p>$30.00</p>
+                </div>
 
-            <div class="shopping-cart">
-                <figure>
-                    <img
-                        src="./Assets/images-products/Age of Empires II Definitive Edition.jpeg"
-                        alt="A juggle's Tale"
-                    />
-                </figure>
-                <p>Age of Empires II Definitive Edition</p>
-                <p>$30.00</p>
-            </div>
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Age of Empires II Definitive Edition.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Age of Empires II Definitive Edition</p>
+                    <p>$30.00</p>
+                </div>
 
-            <div class="shopping-cart">
-                <figure>
-                    <img
-                        src="./Assets/images-products/Age of Empires III Definitive Edition.jpeg"
-                        alt="A juggle's Tale"
-                    />
-                </figure>
-                <p>Age of Empires III Definitive Edition</p>
-                <p>$30.00</p>
-            </div>
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Age of Empires III Definitive Edition.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Age of Empires III Definitive Edition</p>
+                    <p>$30.00</p>
+                </div>
 
-            <div class="shopping-cart">
-                <figure>
-                    <img
-                        src="./Assets/images-products/Batman Arkham Asylum.png"
-                        alt="A juggle's Tale"
-                    />
-                </figure>
-                <p>Batman Arkham Asylum</p>
-                <p>$30.00</p>
-            </div>
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Batman Arkham Asylum.png"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Batman Arkham Asylum</p>
+                    <p>$30.00</p>
+                </div>
 
-            <div class="shopping-cart">
-                <figure>
-                    <img
-                        src="./Assets/images-products/Batman Arkham Origins.jpg"
-                        alt="A juggle's Tale"
-                    />
-                </figure>
-                <p>Batman Arkham Origins</p>
-                <p>$30.00</p>
-            </div>
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Batman Arkham Origins.jpg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Batman Arkham Origins</p>
+                    <p>$30.00</p>
+                </div>
 
-            <div class="shopping-cart">
-                <figure>
-                    <img
-                        src="./Assets/images-products/Code Vein.jpeg"
-                        alt="A juggle's Tale"
-                    />
-                </figure>
-                <p>Code Vein</p>
-                <p>$30.00</p>
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Code Vein.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Code Vein</p>
+                    <p>$30.00</p>
+                </div>
             </div>
         </div>
     </body>

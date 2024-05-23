@@ -29,20 +29,37 @@
             .product-details {
                 width: 360px;
                 padding-bottom: 24px;
-            }
-
-            .product-details > img:nth-child(1) {
                 position: absolute;
-                left: 12px;
-                top: 12px;
-                border-radius: 50%;
+                right: 0;
             }
 
-            .product-details > img:nth-child(1):hover {
-                cursor: pointer;
+            .product-info {
+                margin: 0 24px;
+            }
+
+            .product-info p:nth-child(1) {
+                font-weight: bold;
+                font-size: var(--md);
+                margin-top: 8px;
+                margin-bottom: 0;
+            }
+
+            .product-info p:nth-child(2) {
+                font-size: var(--md);
+                margin-top: 4px;
+                margin-bottom: 0;
+                color: var(--very-light-pink);
+            }
+
+            .product-info p:nth-child(3) {
+                font-size: var(--sm);
+                color: var(--very-light-pink);
+                margin-top: 36px;
+                margin-bottom: 0px;
             }
 
             .primary-button {
+                margin-top: 36px;
                 background-color: var(--hospital-green);
                 border-radius: 8px;
                 border: none;
@@ -61,18 +78,27 @@
             }
 
             .product-details .close-icon {
-                width: 16px;
-                height: 16px;
                 background-color: var(--white);
-                border-radius: 50%;
-                font-size: var(--sm);
-                font-weight: bold;
+                width: 14px;
+                height: 14px;
                 position: absolute;
-                top: 12px;
-                left: 0px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                border-radius: 50%;
+                padding: 12px;
+                top: 8px;
+                left: 8px;
+                cursor: pointer;
+            }
+
+            .product-details .game-image {
+                width: 100%;
+                height: auto;
+                border-radius: 0 0 20px 20px;
+            }
+
+            @media (max-width: 640px) {
+                .product-details {
+                    width: 100%;
+                }
             }
         </style>
     </head>
@@ -88,6 +114,7 @@
             <img
                 src="./Assets/images-products/A Juggler_s Tale.jpeg"
                 alt="a juggler's tale"
+                class="game-image"
             />
             <div class="product-info">
                 <p>$35.00</p>
