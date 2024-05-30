@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+        <style>
+            :root {
+                --white: #ffffff;
+                --black: #000000;
+                --very-light-pink: #c7c7c7;
+                --text-input-field: #f7f7f7;
+                --hospital-green: #acd9b2;
+                --sm: 14px;
+                --md: 16px;
+                --lg: 18px;
+            }
+            body {
+                margin: 0;
+                font-family: "Quicksand", sans-serif;
+            }
+            .page {
+                width: 360px;
+                padding: 24px;
+                box-sizing: border-box;
+                position: absolute;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 16px;
+                align-self: self-start;
+            }
+
+            .title img {
+                display: flex;
+                rotate: 180deg;
+                margin-left: 16px;
+            }
+
+            .title h1 {
+                font-size: var(--lg);
+                font-weight: bold;
+            }
+
+            .header-container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .my-order-content {
+                display: flex;
+                flex-direction: column;
+            }
+            .total {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 16px;
+                align-items: center;
+                background-color: var(--very-light-pink);
+                margin-bottom: 24px;
+                border-radius: 8px;
+                padding: 0 24px;
+            }
+            .total p:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+            }
+            .total p span:nth-child(1) {
+                font-size: var(--md);
+                font-weight: bold;
+            }
+
+            .total p:nth-child(2) {
+                text-align: end;
+                font-weight: bold;
+            }
+
+            .shopping-list {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .shopping-cart {
+                display: grid;
+                grid-template-columns: auto 1fr auto auto;
+                align-items: center;
+                margin-bottom: 24px;
+                border-radius: 8px;
+            }
+
+            .shopping-cart figure {
+                margin: 0;
+            }
+            .shopping-cart figure img {
+                width: 80px;
+                height: 120px;
+                border-radius: 20px;
+            }
+            .shopping-cart p:nth-child(2) {
+                color: var(--hospital-green);
+                width: fit-content;
+                align-self: center;
+                padding-left: 5%;
+            }
+            .shopping-cart p:nth-child(3) {
+                font-size: var(--md);
+                font-weight: bold;
+                text-align: end;
+            }
+
+            .shopping-cart .icon_close {
+                margin-left: 24px;
+            }
+
+            .button .primary-button {
+                background-color: var(--hospital-green);
+                border-radius: 8px;
+                border: none;
+                color: var(--white);
+                width: 100%;
+                cursor: pointer;
+                font-size: var(--md);
+                font-weight: bold;
+                height: 50px;
+                margin-bottom: 24px;
+            }
+
+            @media (max-width: 640px) {
+                .product-details {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <aside class="page">
+            <div class="title">
+                <img src="./Assets/Icons/flechita.svg" alt="flechita" />
+                <h1>Shopping cart</h1>
+            </div>
+            <div class="shopping-list">
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/A Juggler_s Tale.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>A juggle's Tale</p>
+                    <p>$30.00</p>
+                    <img
+                        src="./Assets/Icons/icon_close.png"
+                        class="icon_close"
+                        alt="icon_close"
+                    />
+                </div>
+
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Age of Empires II Definitive Edition.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Age of Empires II Definitive Edition</p>
+                    <p>$30.00</p>
+                    <img
+                        src="./Assets/Icons/icon_close.png"
+                        class="icon_close"
+                        alt="icon_close"
+                    />
+                </div>
+
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Age of Empires III Definitive Edition.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Age of Empires III Definitive Edition</p>
+                    <p>$30.00</p>
+                    <img
+                        src="./Assets/Icons/icon_close.png"
+                        class="icon_close"
+                        alt="icon_close"
+                    />
+                </div>
+
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Batman Arkham Asylum.png"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Batman Arkham Asylum</p>
+                    <p>$30.00</p>
+                    <img
+                        src="./Assets/Icons/icon_close.png"
+                        class="icon_close"
+                        alt="icon_close"
+                    />
+                </div>
+
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Batman Arkham Origins.jpg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Batman Arkham Origins</p>
+                    <p>$30.00</p>
+                    <img
+                        src="./Assets/Icons/icon_close.png"
+                        class="icon_close"
+                        alt="icon_close"
+                    />
+                </div>
+
+                <div class="shopping-cart">
+                    <figure>
+                        <img
+                            src="./Assets/images-products/Code Vein.jpeg"
+                            alt="A juggle's Tale"
+                        />
+                    </figure>
+                    <p>Code Vein</p>
+                    <p>$30.00</p>
+                    <img
+                        src="./Assets/Icons/icon_close.png"
+                        class="icon_close"
+                        alt="icon_close"
+                    />
+                </div>
+            </div>
+            <div class="header-container">
+                <div class="my-order-content">
+                    <div class="total">
+                        <p>
+                            <span>Total</span>
+                        </p>
+                        <p>$560.00</p>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="primary-button">Checkout</button>
+                </div>
+            </div>
+        </aside>
+    </body>
+</html>
